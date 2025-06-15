@@ -4,6 +4,8 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Location from './pages/Location';
 import Menu from './pages/Menu';
+import SignIn from './pages/SignIn';
+import Form from './pages/form';
 
 
 
@@ -15,6 +17,9 @@ function App() {
           <Route path='/about' element={<About/>} />
           <Route path='/menu' element={<Menu/>} />
           <Route path='/location' element={<Location/>} />
+          <Route path='/signin' element={<SignIn/>} />
+          <Route path='/form' element={<Form/>} />
+
         </Routes>
       </Router>
   );

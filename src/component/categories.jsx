@@ -1,15 +1,14 @@
 import { useContext } from 'react'
 import CategoryList from '../CategoryList'
 import { dataContext } from '../userContext'
-import productsList from '../ProductsList'
 
 const Categories = () => {
-    const {setCate} = useContext(dataContext)
+    const {setCate, allProducts} = useContext(dataContext)
     const filter = (category) =>{
         if(category === "ALL"){
-            setCate(productsList)
+            setCate(allProducts)
         }else{
-            const newList = productsList.filter(item=>item.product_category===category)
+            const newList = allProducts.filter(item=>item.category===category)
             setCate(newList)
         }
 

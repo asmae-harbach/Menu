@@ -4,14 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserContext from './userContext';
+import { Provider } from 'react-redux';
+import store from './store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <UserContext>
-    <App />
-  </UserContext>
+  <Provider store={store}>
+    <UserContext>
+      <App />
+    </UserContext>
+  </Provider>
+
 
   );
 

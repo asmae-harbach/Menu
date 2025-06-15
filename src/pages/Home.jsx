@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import imagebg from '../assets/imagebg.png'
 import text from '../assets/text.png'
 import Nav from '../component/Nav'

@@ -3,16 +3,15 @@ import Categories from "../component/categories"
 import Nav from "../component/Nav"
 import Products from "../component/Products"
 import { dataContext } from "../userContext"
-import productsList from "../ProductsList"
 import ProductDetails from "../component/productDetails"
 
 const Menu = () => {
-    const {input, setCate} = useContext(dataContext)
+    const {input, setCate, allProducts} = useContext(dataContext)
     const [isOpen, setIsOpen] = useState(false)
     const [data, setData] = useState([])
 
     useEffect(()=>{
-        const newList = productsList.filter(item=>item.product_name.toLowerCase().includes(input.toLowerCase()))
+        const newList = allProducts.filter(item=>item.name.toLowerCase().includes(input.toLowerCase()))
         setCate(newList)
     }, [input])
     return(
