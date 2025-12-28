@@ -1,11 +1,12 @@
+require("dotenv").config();
 const express =  require("express")
 const app = express()
-const port = 4000
+const PORT = process.env.PORT || 4000;
 
 require('./conn/conn')
 
 const cors = require('cors')
-app.use(cors({origin : 'http://localhost:3000'}))
+app.use(cors({origin : "*"}))
 
 app.use(express.json())
 
@@ -18,6 +19,6 @@ app.use('/api/v2', apiProduct)
 
 app.use('/uploads', express.static('uploads'))
 
-app.listen(port, ()=>{
+app.listen(PORT, ()=>{
     console.log("http://localhost:4000/")
 })
