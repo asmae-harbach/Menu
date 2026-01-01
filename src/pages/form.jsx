@@ -39,7 +39,7 @@ const Form = () =>{
 
 
         try{
-            await axios.post('http://localhost:4000/api/v2/add-product', formData, {headers : {'Content-Type': 'multipart/form-data'}})
+            await axios.post(`${process.env.REACT_APP_API_URL}/api/v2/add-product`, formData, {headers : {'Content-Type': 'multipart/form-data'}})
             alert("Produit Ajoutée !")
             setData({name : "", description : "", category : "", price : 0, image : ""})
             if (fileInputRef.current) {

@@ -10,7 +10,7 @@ const UserContext = ({children}) =>{
 
     useEffect(()=>{
         const fetch = async() => {
-            const response = await axios.get("http://localhost:4000/api/v2/get-products")
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/v2/get-products`)
             setCate(response.data)
             setAllProducts(response.data)
         }
