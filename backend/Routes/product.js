@@ -36,7 +36,7 @@ router.post('/add-product', upload.single('image') ,async(req, res)=>{
 
 router.get('/get-products', async(req, res)=>{
     try {
-        const products = await Product.find()
+        const products = await Product.find().sort({ createdAt: -1 })
         res.status(200).json(products)
     } catch (error) {
         console.log(error)
