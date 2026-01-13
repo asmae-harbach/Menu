@@ -22,7 +22,6 @@ const SignIn = () =>{
                 alert('Tous les cases sont requis')
             }else{
                 const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/signin`, data)
-                console.log("RESPONSE:", response)
                 localStorage.setItem("id", response.data.id)
                 localStorage.setItem("token", response.data.token)
                 setData({username:"", password:""})
