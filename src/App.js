@@ -6,6 +6,7 @@ import Location from './pages/Location';
 import Menu from './pages/Menu';
 import SignIn from './pages/SignIn';
 import Form from './pages/form';
+import Signup from './pages/SignUp';
 
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/menu' element={<Menu/>} />
           <Route path='/location' element={<Location/>} />
           <Route path='/signin' element={<SignIn/>} />
+          <Route path="/signup" element={<Signup/>} />
           <Route path='/form' element={<Form/>} />
 
         </Routes>
